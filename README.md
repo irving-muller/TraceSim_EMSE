@@ -28,8 +28,7 @@ python setup.py build_ext --inplace
 
 ## Data
 
-The data used in the paper can be found [here](https://zenodo.org/record/5746044#.YabKILtyZH4). The four folders  
-contain the dataset of the open-sources projects (Ubuntu, Eclipse, Netbeans, and Gnome).
+The data used in the paper can be found [here](https://zenodo.org/record/5746044#.YabKILtyZH4). The four folders contain the dataset of the open-sources projects (Ubuntu, Eclipse, Netbeans, and Gnome).
 The original data from Ubuntu can be found on [Campbell's work](https://ieeexplore.ieee.org/document/7832906).
 
 
@@ -43,33 +42,33 @@ Below, we present example of how to run each method in a specific chunk:
 
 ```
 # TraceSim
-python experiments/hyperparameter_opt.py $DATASET_PATH/eclipse_2018/eclipse_stacktraces.json $DATASET_PATH/eclipse_2018/chunks_test/validation_chunk_0.txt  trace_sim  /home/irmul/TraceSim_emse/space_script/trace_sim_space_eclipse.py -nthreads 20 -filter_func threshold_trim -sparse -max_evals 100 -w 730 -test $DATASET_PATH/eclipse_2018/chunks_test/test_chunk_0.txt
+python experiments/hyperparameter_opt.py $DATASET_PATH/eclipse_2018/eclipse_stacktraces.json $DATASET_PATH/eclipse_2018/chunks_test/validation_chunk_0.txt  trace_sim  $WORKSPACE/TraceSim_EMSE/space_script/trace_sim_space_eclipse.py -nthreads 20 -filter_func threshold_trim -sparse -max_evals 100 -w 730 -test $DATASET_PATH/eclipse_2018/chunks_test/test_chunk_0.txt
 
 # Moroo
-python experiments/hyperparameter_opt.py $DATASET_PATH/eclipse_2018/eclipse_stacktraces.json $DATASET_PATH/eclipse_2018/chunks_test/validation_chunk_0.txt  moroo  /home/irmul/TraceSim_emse/space_script/mooro_space_eclipse.py -nthreads 20 -filter_func threshold_trim -sparse -max_evals 100 -w 730 -test $DATASET_PATH/eclipse_2018/chunks_test/test_chunk_0.txt  -top_n_file_validation /home/irmul/validation_result_files/lerch_eclipse_validation_0.sparse -top_n_file_test /home/irmul/test_result_files/lerch_eclipse_test_0.sparse
+python experiments/hyperparameter_opt.py $DATASET_PATH/eclipse_2018/eclipse_stacktraces.json $DATASET_PATH/eclipse_2018/chunks_test/validation_chunk_0.txt  moroo  $WORKSPACE/TraceSim_EMSE/space_script/mooro_space_eclipse.py -nthreads 20 -filter_func threshold_trim -sparse -max_evals 100 -w 730 -test $DATASET_PATH/eclipse_2018/chunks_test/test_chunk_0.txt  -top_n_file_validation $WORKSPACE/validation_result_files/lerch_eclipse_validation_0.sparse -top_n_file_test $WORKSPACE/test_result_files/lerch_eclipse_test_0.sparse
 
 # PDM
-python experiments/hyperparameter_opt.py $DATASET_PATH/eclipse_2018/eclipse_stacktraces.json $DATASET_PATH/eclipse_2018/chunks_test/validation_chunk_0.txt  pdm  /home/irmul/TraceSim_emse/space_script/pdm_space_eclipse.py -nthreads 20 -filter_func threshold_trim -sparse -max_evals 100 -w 730 -test $DATASET_PATH/eclipse_2018/chunks_test/test_chunk_0.txt
+python experiments/hyperparameter_opt.py $DATASET_PATH/eclipse_2018/eclipse_stacktraces.json $DATASET_PATH/eclipse_2018/chunks_test/validation_chunk_0.txt  pdm  $WORKSPACE/TraceSim_EMSE/space_script/pdm_space_eclipse.py -nthreads 20 -filter_func threshold_trim -sparse -max_evals 100 -w 730 -test $DATASET_PATH/eclipse_2018/chunks_test/test_chunk_0.txt
 
 
 #Prefix Match
-python experiments/hyperparameter_opt.py $DATASET_PATH/eclipse_2018/eclipse_stacktraces.json $DATASET_PATH/eclipse_2018/chunks_test/validation_chunk_0.txt  prefix_match  /home/irmul/TraceSim_emse/space_script/prefix_match_space_eclipse.py -nthreads 20 -filter_func threshold_trim -sparse -max_evals 100 -w 730 -test $DATASET_PATH/eclipse_2018/chunks_test/test_chunk_0.txt
+python experiments/hyperparameter_opt.py $DATASET_PATH/eclipse_2018/eclipse_stacktraces.json $DATASET_PATH/eclipse_2018/chunks_test/validation_chunk_0.txt  prefix_match  $WORKSPACE/TraceSim_EMSE/space_script/prefix_match_space_eclipse.py -nthreads 20 -filter_func threshold_trim -sparse -max_evals 100 -w 730 -test $DATASET_PATH/eclipse_2018/chunks_test/test_chunk_0.txt
 
 # Brodie
-python experiments/hyperparameter_opt.py $DATASET_PATH/eclipse_2018/eclipse_stacktraces.json $DATASET_PATH/eclipse_2018/chunks_test/validation_chunk_0.txt  brodie_05  /home/irmul/TraceSim_emse/space_script/brodie_space_eclipse.py -nthreads 20 -filter_func threshold_trim -sparse -max_evals 100 -w 730 -test $DATASET_PATH/eclipse_2018/chunks_test/test_chunk_0.txt
+python experiments/hyperparameter_opt.py $DATASET_PATH/eclipse_2018/eclipse_stacktraces.json $DATASET_PATH/eclipse_2018/chunks_test/validation_chunk_0.txt  brodie_05  $WORKSPACE/TraceSim_EMSE/space_script/brodie_space_eclipse.py -nthreads 20 -filter_func threshold_trim -sparse -max_evals 100 -w 730 -test $DATASET_PATH/eclipse_2018/chunks_test/test_chunk_0.txt
 
 # NW
-python experiments/hyperparameter_opt.py $DATASET_PATH/eclipse_2018/eclipse_stacktraces.json $DATASET_PATH/eclipse_2018/chunks_test/validation_chunk_0.txt  opt_align /home/irmul/TraceSim_emse/space_script/opt_align_space_eclipse.py -nthreads 20 -filter_func threshold_trim -sparse -max_evals 100 -w 730 -test $DATASET_PATH/eclipse_2018/chunks_test/test_chunk_0.txt
+python experiments/hyperparameter_opt.py $DATASET_PATH/eclipse_2018/eclipse_stacktraces.json $DATASET_PATH/eclipse_2018/chunks_test/validation_chunk_0.txt  opt_align $WORKSPACE/TraceSim_EMSE/space_script/opt_align_space_eclipse.py -nthreads 20 -filter_func threshold_trim -sparse -max_evals 100 -w 730 -test $DATASET_PATH/eclipse_2018/chunks_test/test_chunk_0.txt
 
 # DURFEX
-python experiments/grid_search.py $DATASET_PATH/eclipse_2018/eclipse_stacktraces.json $DATASET_PATH/eclipse_2018/chunks_test/validation_chunk_0.txt  durfex /home/irmul/TraceSim_emse/space_script/durfex_eclipse.py -nthreads 20 -filter_func threshold_trim -sparse -w 730 -test $DATASET_PATH/eclipse_2018/chunks_test/test_chunk_0.txt
+python experiments/grid_search.py $DATASET_PATH/eclipse_2018/eclipse_stacktraces.json $DATASET_PATH/eclipse_2018/chunks_test/validation_chunk_0.txt  durfex $WORKSPACE/TraceSim_EMSE/space_script/durfex_eclipse.py -nthreads 20 -filter_func threshold_trim -sparse -w 730 -test $DATASET_PATH/eclipse_2018/chunks_test/test_chunk_0.txt
 
 
 #TF-IDF
    cd $WORKSPACE/textual_similarity_deduplication
-   /usr/lib/jvm/java-1.11.0-openjdk-amd64/bin/java -Dfile.encoding=UTF-8 -classpath $WORKSPACE/textual_similarity_deduplication/out/production/textual_similarity_deduplication:$WORKSPACE/textual_similarity_deduplication/lib/json-simple-1.1.1.jar:$WORKSPACE/textual_similarity_deduplication/lib/argparse4j-0.8.1.jar:$WORKSPACE/textual_similarity_deduplication/lib/commons-io-2.7.jar:$WORKSPACE/textual_similarity_deduplication/lib/commons-lang3-3.10.jar:$WORKSPACE/textual_similarity_deduplication/lib/lucene-analyzers-common-8.5.2.jar:$WORKSPACE/textual_similarity_deduplication/lib/lucene-core-8.5.2.jar:$WORKSPACE/textual_similarity_deduplication/lib/lucene-queryparser-8.5.2.jar:/home/irving/ideaIU-2020.1.2/idea-IU-201.7846.76/lib/idea_rt.jar BugDeduplication -db $DATASET_PATH/eclipse_2018/eclipse_stacktraces.json -training $DATASET_PATH/eclipse_2018/chunks_test/training_chunk_0.txt $DATASET_PATH/eclipse_2018/chunks_test/validation_chunk_0.txt -validation $DATASET_PATH/eclipse_2018/chunks_test/test_chunk_0.txt  -index /home/irving/lucene_index -out $WORKSPACE/textual_similarity_deduplication/test_result_files/lerch_eclipse_test_0.sparse -config $WORKSPACE/textual_similarity_deduplication/test_config_eclipse.json -sparse -min_top_score 500 -window 730 > $WORKSPACE/TraceSim_emse/lerch_eclipse_test_results/lerch_eclipse_test_java_run_0.log
-   cd  $WORKSPACE/TraceSim_emse
-   python experiments/calculate_metrics.py $DATASET_PATH/eclipse_2018/eclipse_stacktraces.json $DATASET_PATH/eclipse_2018/chunks_test/test_chunk_0.txt -w 730 -add_cand -result_file $WORKSPACE/textual_similarity_deduplication/test_result_files/lerch_eclipse_test_0.sparse 2> $WORKSPACE/TraceSim_emse/lerch_eclipse_test_results/lerch_eclipse_test_python_run_0.log
+   /usr/lib/jvm/java-1.11.0-openjdk-amd64/bin/java -Dfile.encoding=UTF-8 -classpath $WORKSPACE/textual_similarity_deduplication/out/production/textual_similarity_deduplication:$WORKSPACE/textual_similarity_deduplication/lib/json-simple-1.1.1.jar:$WORKSPACE/textual_similarity_deduplication/lib/argparse4j-0.8.1.jar:$WORKSPACE/textual_similarity_deduplication/lib/commons-io-2.7.jar:$WORKSPACE/textual_similarity_deduplication/lib/commons-lang3-3.10.jar:$WORKSPACE/textual_similarity_deduplication/lib/lucene-analyzers-common-8.5.2.jar:$WORKSPACE/textual_similarity_deduplication/lib/lucene-core-8.5.2.jar:$WORKSPACE/textual_similarity_deduplication/lib/lucene-queryparser-8.5.2.jar:/home/irving/ideaIU-2020.1.2/idea-IU-201.7846.76/lib/idea_rt.jar BugDeduplication -db $DATASET_PATH/eclipse_2018/eclipse_stacktraces.json -training $DATASET_PATH/eclipse_2018/chunks_test/training_chunk_0.txt $DATASET_PATH/eclipse_2018/chunks_test/validation_chunk_0.txt -validation $DATASET_PATH/eclipse_2018/chunks_test/test_chunk_0.txt  -index /home/irving/lucene_index -out $WORKSPACE/textual_similarity_deduplication/test_result_files/lerch_eclipse_test_0.sparse -config $WORKSPACE/textual_similarity_deduplication/test_config_eclipse.json -sparse -min_top_score 500 -window 730 > $WORKSPACE/TraceSim_EMSE/lerch_eclipse_test_results/lerch_eclipse_test_java_run_0.log
+   cd  $WORKSPACE/TraceSim_EMSE
+   python experiments/calculate_metrics.py $DATASET_PATH/eclipse_2018/eclipse_stacktraces.json $DATASET_PATH/eclipse_2018/chunks_test/test_chunk_0.txt -w 730 -add_cand -result_file $WORKSPACE/textual_similarity_deduplication/test_result_files/lerch_eclipse_test_0.sparse 2> $WORKSPACE/TraceSim_EMSE/lerch_eclipse_test_results/lerch_eclipse_test_python_run_0.log
 
 
 ```
