@@ -80,6 +80,7 @@ Paper results are in the following jupyter notebooks: _test_results.ipynb_ and _
 # Citation
 The paper was accepted and will be published in EMSE - Topical Collection: Machine Learning Techniques for Software Quality Evaluation (MaLTeSQuE).
 
+```
 @Article{rodrigues2021,
     author={Rodrigues, Irving Muller
         and Khvorov, Aleksandr
@@ -103,6 +104,7 @@ The paper was accepted and will be published in EMSE - Topical Collection: Machi
     url={https://doi.org/10.1007/s10664-021-10070-w},
     publisher={Springer}
 }
+```
 
 # License
 ```
