@@ -79,25 +79,30 @@ Paper results are in the following jupyter notebooks: _test_results.ipynb_ and _
 
 # Citation
 The paper was accepted and will be published in EMSE - Topical Collection: Machine Learning Techniques for Software Quality Evaluation (MaLTeSQuE).
-<!-- 
-If the code helps your research, please consider to cite our work:
 
-    A Soft Alignment Model for Bug Deduplication. 
-    Irving Muller Rodrigues, Daniel Aloise, Eraldo Rezende Fernandes, and Michel Dagenais.
-    In 17th International Conference on Mining Software Repositories (MSR ’20), October 5–6, 2020, Seoul, Republic of Korea.
-    ACM, New York, NY, USA, 12 pages.
-    https://doi.org/10.1145/3379597.3387470
-    
-    @INPROCEEDINGS {rodrigues2020,
-        author    = "Irving Muller Rodrigues, Daniel Aloise, Eraldo Rezende Fernandes, and Michel Dagenais",
-        title     = "A Soft Alignment Model for Bug Deduplication",
-        booktitle = "17th International Conference on Mining Software Repositories (MSR ’20)",
-        year      = "2020",
-        address   = "Seoul, Republic of Korea",
-        month     = "oct",
-        publisher = "ACM"
-        note      = "forthcoming"
-    } -->
+@Article{rodrigues2021,
+    author={Rodrigues, Irving Muller
+        and Khvorov, Aleksandr
+        and Aloise, Daniel
+        and Vasiliev, Roman
+        and Koznov, Dmitrij
+        and Fernandes, Eraldo Rezende
+        and Chernishev, George
+        and Luciv, Dmitry
+        and Povarov, Nikita},
+    title={TraceSim: An Alignment Method for Computing Stack Trace Similarity},
+    journal={Empirical Software Engineering},
+    year={2022},
+    month={Mar},
+    day={01},
+    volume={27},
+    number={2},
+    pages={53},
+    issn={1573-7616},
+    doi={10.1007/s10664-021-10070-w},
+    url={https://doi.org/10.1007/s10664-021-10070-w},
+    publisher={Springer}
+}
 
 # License
 ```
